@@ -87,6 +87,8 @@ gulp serve
 
 ## Deploying
 
+The instructions for this section should not apply to the AHO deployment since we are pulling from the eff repo. Go the the deployment/README.md page.
+
 To deploy the server, simply run:
 
 ```
