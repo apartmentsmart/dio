@@ -78,7 +78,7 @@
       "API_BASE_URL": "/api"
     },
 
-    "SENTRY_DSN": ""
+    "SENTRY_DSN": "https://a24b9850823f459583736e66478a880f@sentry.io/211570"
   }
 
 }
