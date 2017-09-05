@@ -59,7 +59,7 @@ middleware(apiDef, app, function(err, middleware) {
 
   app.use(lusca({
     csrf: false,
-    xframe: 'SAMEORIGIN',
+    xframe: false,
     p3p: false,
     csp: false
   }));
