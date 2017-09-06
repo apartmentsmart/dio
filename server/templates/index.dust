@@ -10,12 +10,12 @@
 
     <div class="main">
     
-      {>"components/nav-bar"/}
+      {! {>"components/nav-bar"/} !}
 
       <noscript>
-      <div class="text-center"><h3>Democracy.io requires Javascript to work.</h3><h4>Please load the site using a browser that supports Javascript.</h4></div></noscript>
+      <div class="text-center"><h3>This window requires Javascript to work.</h3><h4>Please load the site using a browser that supports Javascript.</h4></div></noscript>
 
-      <div ng-switch ng-cloak on="pageName">
+     {! <div ng-switch ng-cloak on="pageName">
         <div ng-switch-when="home"
              class="header"
              dio-write-to-them-animation=""
@@ -40,7 +40,7 @@
               class="header">
              Message sent!
         </h1>
-      </div>
+      </div> !}
 
       {>"components/progress-bar"/}
 
@@ -50,14 +50,16 @@
       </div>
     </div>
 
+  {!
     <div ng-if="pageName === 'home'" id="whydio">
       {>"components/home-bottom"/}
     </div>
+    !}
 
   </div>
 
 
-  {>"components/footer"/}
+  {! {>"components/footer"/}  !}
 
 {/body}
 
