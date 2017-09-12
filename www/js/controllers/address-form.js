@@ -9,7 +9,10 @@ var CanonicalAddress = require('../../../models').CanonicalAddress;
 var helpers = require('../helpers/address-form');
 
 
-var AddressFormController = /*@ngInject*/ function($scope, $location, dioData, dioAPI, $timeout, $document) {
+var AddressFormController = /*@ngInject*/ function($scope, $rootScope, $routeParams, $location, dioData, dioAPI, $timeout, $document) {
+
+  $rootScope.ahurl = $routeParams.ahourl;
+
   $scope.addressData = helpers.getAddressData(dioData.getCanonicalAddress());
 
   $scope.data = {

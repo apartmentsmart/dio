@@ -6,10 +6,14 @@
 var configureRoutes = function($routeProvider) {
 
   $routeProvider
+     .when('/ahourl/:ahourl*', {
+      templateUrl: '/partials/home.html',
+      title: 'Write url to your representatives'
+    })
     .when('/', {
       templateUrl: '/partials/home.html',
       title: 'Write to your representatives'
-    })
+    }) 
     .when('/location', {
       controller: 'LegislatorPickerController',
       templateUrl: '/partials/legislator-picker.html',
