@@ -173,21 +173,21 @@ strong {
 
 @media (min-width: 1200px) {
   textarea#inputMessage {
-    padding-top: 42px;
+    padding-top: 10px;
     position: relative;
   }
 }
 
 @media (max-width: 1200px) {
   textarea#inputMessage {
-    padding-top: 65px;
+    padding-top: 10px;
     position: relative;
   }
 }
 
 @media (max-width: 400px) {
   textarea#inputMessage {
-    padding-top: 86px;
+    padding-top: 10px;
     position: relative;
   }
 }
@@ -207,7 +207,7 @@ strong {
     color: #999;
     z-index: 1;
     font-size: 16px;
-    content: 'Dear [Representative/Senator],';
+    /* content: 'Dear [Representative/Senator],'; */
     background-color: #fff;
     padding-left: 12px;
     padding-top: 12px;

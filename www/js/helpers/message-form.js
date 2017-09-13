@@ -76,10 +76,11 @@ var makeSenderInfo = function(formData, parensPhone) {
  *
  * @param legislator
  * @param formData
+ * @param afhourl
  * @param topic An object describing the topics for a legislator, as created by parseTopicOptions.
  * @returns {{}}
  */
-var makeMessageInfo = function(legislator, formData, topic) {
+var makeMessageInfo = function(legislator, formData, afhourl, topic) {
 
   var topicValue = null;
   if (!isUndefined(topic)) {
@@ -89,8 +90,9 @@ var makeMessageInfo = function(legislator, formData, topic) {
 
   return {
     topic: topicValue,
-    subject: formData.subject,
-    message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
+    subject: 'Affordable Housing Data',
+    //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
+    message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThis web page has interesting data regarding affordable housing for our area:\n ' + afhourl +'. \n' + formData.message
   };
 
 };
@@ -118,10 +120,11 @@ var makeCampaignInfo = function() {
  * @param phoneValue
  * @param topicOptions
  * @param address
+ * @param afhourl
  * @returns {*}
  */
-var makeMessage = function(legislator, formData, phoneValue, topicOptions, address) {
-  var messageInfo = makeMessageInfo(legislator, formData, topicOptions[legislator.bioguideId]);
+var makeMessage = function(legislator, formData, phoneValue, topicOptions, address, afhourl) {
+  var messageInfo = makeMessageInfo(legislator, formData, afhourl, topicOptions[legislator.bioguideId]);
 
   var msg = new models.Message({
     bioguideId: legislator.bioguideId,

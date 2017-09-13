@@ -22,7 +22,9 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
   $scope.submitted = false;
   $scope.joinEmailList = false;
   $scope.sending = false;
-  $scope.legislatorList = 'Dear [Representative/Senator],';
+  
+  $scope.legislatorList = '';
+ 
 
   $timeout(function() {
     $scope.loadingDelay = false;
@@ -30,7 +32,8 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
 
   $scope.goBack = function() {
     if (!dioData.hasCanonicalAddress()) {
-      $location.path('/');
+      //$location.path('/');
+      $location.path('/ahourl/'+$rootScope.ahurl);
     } else {
       $location.path('/location');
     }
@@ -43,6 +46,8 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
   $scope.formData = {
     prefix: 'Ms'
   };
+
+  $scope.formData.subject = 'Affordable Housing';
 
   /**
    *
@@ -103,9 +108,13 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
         $scope.formData,
         $scope.messageForm.phone.$viewValue,
         $scope.topicOptions,
-        $scope.address
+        $scope.address,
+        $rootScope.ahurl
       );
     });
+
+    console.log(messages);
+    /*  Uncomment this block to re-enable posting to actual live congress peeps' web forms
 
     var cb = function(err, messageResponses) {
       var serverErr = !isEmpty(err);
@@ -146,7 +155,7 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
       dioAPI.subscribeToEFFList(subRequest, function() {
         // no-op as EFF subscription is best-effort only
       });
-    }
+    }  */
 	};
 
   /**
