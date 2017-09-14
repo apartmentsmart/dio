@@ -22,13 +22,29 @@ var models = require('../../../models');
 var parseTopicOptions = function(topicElem, legislator) {
   var options = isArray(topicElem.optionsHash) ?
     topicElem.optionsHash : keys(topicElem.optionsHash);
+  
+  //loop below to set 'Housing' as selected topic, set default index to 1 so 'Abortion' not selected if condition not true
+  var selOpt = 1;
+  options.forEach(function(element, index) {
+    if(element.indexOf('Hou') !== -1 || element.indexOf('HOU') !== -1 || element.indexOf('hou') !== -1) {
+      selOpt = index;
+    }
+  });
+
+  if (selOpt === 1) {
+      options.forEach(function(element, index) {
+        if(element.indexOf('Oth') !== -1 || element.indexOf('OTH') !== -1 || element.indexOf('oth') !== -1) {
+          selOpt = index;
+        }
+      });   
+  }
 
   return {
     bioguideId: legislator.bioguideId,
     name: legislator.title + '. ' + legislator.lastName,
     options: options,
     optionsHash: topicElem.optionsHash,
-    selected: options[0]
+    selected: options[selOpt]
   };
 };
 
