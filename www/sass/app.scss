@@ -5,7 +5,9 @@ $brand-primary: #f85628;
 $primaryColor: #fff;
 $secondaryColor: #fff;
 $highlightColor: #fff;
-$activeColor: #f85628;
+/* $activeColor: #f85628; */
+$activeColor: #0095DA; 
+
 $slowDuration: 0.4s;
 $transitionDuration: 0.5s;
 $easing: cubic-bezier(0.5, 0, 0, 1);
@@ -13,6 +15,12 @@ $border-radius: 2px;
 
 // Variables
 $pink: #F93469;
+
+$aholtblue: #0095DA;
+
+$ahodrkpurp: #331832;
+
+$aholtpurp: #694D75;
 
 @import "hover.css/scss/options";
 @import "hover.css/scss/mixins";

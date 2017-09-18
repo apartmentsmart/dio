@@ -215,10 +215,11 @@ strong {
   }
 }
 .panel {
-  border: 1px solid #f9465b;
+  border: 1px solid #694D75;
 }
 .panel-heading {
-  background-image: linear-gradient(to right, #f9465b, #fa6444);
+  /* background-image: linear-gradient(to right, #331832, #694D75); */
+  background-color: #694D75;
   color: #fff;
   font-size: 12px;
   letter-spacing: 1.5px;
