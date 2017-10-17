@@ -114,6 +114,9 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
     });
 
     console.log(messages);
+
+    //add code here to insert into mysql database - then move to proper location after launch
+
     /*  Uncomment this block to re-enable posting to actual live congress peeps' web forms
 
     var cb = function(err, messageResponses) {

@@ -9,7 +9,7 @@ var map = require('lodash.map');
 var CaptchaSolution = require('../../../models').CaptchaSolution;
 
 
-var CaptchaController =  /*@ngInject*/ function($scope, $location, $timeout, dioData, dioAPI) {
+var CaptchaController =  /*@ngInject*/ function($scope, $rootScope, $location, $timeout, dioData, dioAPI) {
 
   /**
    *
@@ -25,7 +25,8 @@ var CaptchaController =  /*@ngInject*/ function($scope, $location, $timeout, dio
 
   $scope.goBack = function() {
     if (!dioData.hasCanonicalAddress()) {
-      $location.path('/');
+     // $location.path('/');
+      $location.path('/ahourl/'+$rootScope.ahurl);
     } else {
       $location.path('/location');
     }
