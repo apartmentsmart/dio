@@ -22,9 +22,9 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
   $scope.submitted = false;
   $scope.joinEmailList = false;
   $scope.sending = false;
-  
+
   $scope.legislatorList = '';
- 
+
 
   $timeout(function() {
     $scope.loadingDelay = false;
@@ -113,11 +113,11 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
       );
     });
 
-    console.log(messages);
+    // console.log(messages);
 
     //add code here to insert into mysql database - then move to proper location after launch
 
-    /*  Uncomment this block to re-enable posting to actual live congress peeps' web forms
+    /*  Comment out this block to disable actually posting messages to congress members' web forms */
 
     var cb = function(err, messageResponses) {
       var serverErr = !isEmpty(err);
@@ -158,7 +158,7 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
       dioAPI.subscribeToEFFList(subRequest, function() {
         // no-op as EFF subscription is best-effort only
       });
-    }  */
+    }  /* end disable bloc */
 	};
 
   /**
