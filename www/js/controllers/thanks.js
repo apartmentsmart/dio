@@ -31,6 +31,8 @@ var ThanksController = /*@ngInject*/ function($scope, $sce) {
   $scope.sharePopup = function(link) {
     window.open(link, 'Share', 'width=650,height=400');
   };
+
+   /* maybe add code here to insert into mysql database - then move to proper location after launch */
 };
 
 module.exports = ThanksController;

@@ -115,7 +115,7 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
 
     //console.log(messages);
 
-    /* add code here to insert into mysql database - then move to proper location after launch */
+
 
     /*  Comment out this block to disable actually posting messages to congress members' web forms */
 
@@ -144,6 +144,9 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
 
     $scope.sending = true;
     dioAPI.submitMessageToReps(messages, cb);
+
+    /* maybe add code here to insert into mysql database - then move to proper location after launch */
+
 
     if ($scope.joinEmailList) {
       var messageSender = new MessageSender({
