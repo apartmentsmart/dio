@@ -10,6 +10,10 @@ The following need to be installed/configured:
 - `local.json` file needs to exist in the `/config` folder and should contain the app credentials.
 - Set environment variable NODE_ENV to `production`
 
+## Disable posting to congress members' web forms
+
+If you need to disable the actual sending of email messages to congress members but want to keep the majority of the app visible and functional, just comment out the block of code (marked with multiline comment blocks) starting around line 117 of www/js/controllers/message-form.js and ending at the lone "}" around line 161.
+
 ## Additional AHO-specific server notes
 
 This app is running on its own Ubuntu EC2 instance. The app files reside in the /home/ubuntu/dio directory. The app has been registered and launched with the pm2 process manager under the name DIO. Nginx web server is handling incoming HTTP requests and passing them through to the app (which like many node apps runs on port 3000). Reverse proxy has been handled with an nginx config file "dio" in the "sites_available" directory with a symlink "dio" in "sites_enabled" pointing to the actual file.
