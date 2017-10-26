@@ -1,6 +1,6 @@
 html, body {
   min-height: 100%;
-  overflow-y: auto; 
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 html {
@@ -30,6 +30,16 @@ body {
 .main {
   min-height: 700px;
 }
+@media screen and  (max-width: 601px){
+  .main {
+    /* prevent long urls from not wrapping */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+  }
+}
+
 a.ondark {
   color: #fff;
   &:visited, &:active {
@@ -133,7 +143,7 @@ h1.header {
     border-top-left-radius: 5px;
     /* background-image: linear-gradient(to right, #FF8900, $pink); */
     background-image: linear-gradient(to right, #694D75, $aholtblue);
-    
+
 
   }
   label {
@@ -161,7 +171,7 @@ h1.header {
 .checkbox input[type="checkbox"]:disabled  + label:before {
   background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" enable-background="new 0 0 50 50"><path d="M25 50c-13.785 0-25-11.215-25-25s11.215-25 25-25 25 11.215 25 25-11.215 25-25 25zm0-48.482c-12.951 0-23.487 10.534-23.487 23.482s10.536 23.482 23.487 23.482c12.95 0 23.486-10.534 23.486-23.482s-10.535-23.482-23.486-23.482z" fill="#E6E7E8"/><g fill="#E6E7E8"><path d="M11.919 31.01l19.091-19.091c.972-.972 2.563-.972 3.536 0l3.536 3.536c.972.972.972 2.563 0 3.536l-19.092 19.09c-.972.972-2.563.972-3.536 0l-3.536-3.536c-.972-.971-.972-2.562.001-3.535zM31.01 38.081l-19.091-19.091c-.972-.972-.972-2.563 0-3.536l3.536-3.536c.972-.972 2.563-.972 3.536 0l19.09 19.092c.972.972.972 2.563 0 3.536l-3.536 3.536c-.971.972-2.562.972-3.535-.001z"/></g></svg>');
   background-size: cover;
-} 
+}
 .checkbox input[type="checkbox"] + label:before {
     content:" ";
     display:inline-block;
