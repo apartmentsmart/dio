@@ -23,7 +23,7 @@ This app is running on its own Ubuntu EC2 instance. The app files reside in the 
 - Pull latest version from repo. AHO note: we are pulling from the master branch of [our own AHO repo](https://github.com/apartmentsmart/dio).
 - `npm install` (installs npm modules)
 - `npm run build:prod` (builds static assets)
-- `npm run test` (runs tests) 
+- `npm run test` (runs tests -- AHO note: this will probably fail since we have changed the codebase - app should still work)
 - `pm2 startOrRestart ecosystem.json5 --env production` (restart pm2 process manager in production mode)
 - `curl -X PURGE https://democracy.io/static` (purge varnish cache)
 
