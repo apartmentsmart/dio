@@ -33,7 +33,7 @@
       <p ng-if="!loadingDelay  && !legislatorsFormElements">This'll just take one moment ...</p>
       <p ng-if="sending">Sending your message now ... this process may take up to 30 seconds.</p>
     </div>
-    
+
     <form name="messageForm" class="whitebox-container" ng-show="legislatorsFormElements && !sending" novalidate>
 
       <div class="row">
@@ -55,14 +55,27 @@
         </div>
       </div>
 
-      
+
 
       <div class="row">
         <div class="form-group col-sm-8 col-md-9">
         <label for="inputMessagez">Message</label>
         <p>Dear [[legislatorList]],</p>
-        <p>This web address has some interesting data regarding affordable housing for our area:<br><strong>[[ahurl]]</strong></p><br>
-        
+
+        <div ng-switch="ahurl">
+
+          <div ng-switch-when="https://affordablehousingonline.com/advocacy/issues/2017-tax-reform-bill">
+           <p>Display for tax reform bill.</p>
+
+          </div>
+
+          <div ng-switch-default>
+            <p>This web address has some interesting data regarding affordable housing for our area:<br><strong>[[ahurl]]</strong></p>
+          </div>
+
+      </div>
+
+        <br>
 
         <label for="inputMessage">Additional comments to your congress member(s):</label>
         <!-- <style ng-bind-html="'#textarea-container::after {content:\'\'}'"></style> -->
@@ -190,7 +203,7 @@
       </div>
 
       <div class="form-group emailSignup" >
-        
+
         <!-- <div class="checkbox">
           <input type="checkbox" id="emailSignup" ng-model="joinEmailList" unchecked>
           <label for="emailSignup">Want to stay up to date with EFF and our work? Click this button to sign up for email updates (<a href="https://www.eff.org/policy">privacy policy</a>).</label>
@@ -203,8 +216,8 @@
               ng-show="!messageForm.$invalid">
         Send!
       </button>
-     
-      
+
+
     </form>
 
     <div class="alert alert-warning"
