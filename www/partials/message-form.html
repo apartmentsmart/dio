@@ -51,7 +51,19 @@
       <div class="row">
         <div class="form-group col-sm-8 col-md-9">
           <label for="inputSubject">Subject</label>
-          <p><strong>Affordable Housing Data</strong></p>
+          <div ng-switch="ahurl">
+
+              <div ng-switch-when="https://affordablehousingonline.com/advocacy/issues/2017-tax-reform-bill">
+                <p><strong>2017 Tax Reform Hurts Low-Income Renters</strong></p>
+
+              </div>
+
+              <div ng-switch-default>
+                  <p><strong>Affordable Housing Data</strong></p>
+              </div>
+
+          </div>
+
         </div>
       </div>
 
@@ -65,7 +77,7 @@
         <div ng-switch="ahurl">
 
           <div ng-switch-when="https://affordablehousingonline.com/advocacy/issues/2017-tax-reform-bill">
-           <p>Display for tax reform bill.</p>
+           <p>The Tax Reform legislation currently under consideration by Congress will harm low-income renters in America. Low income housing is already hard to find. Please don’t make it harder. Please vote “No” on any tax reform legislation that comes before you that doesn’t consider low-income Americans and their struggle to find and pay for housing. You can read more about how the legislation impacts low-income renters here:<br><strong>https://affordablehousingonline.com/blog/proposed-tax-reform-not-good-low-income-renters</strong></p>
 
           </div>
 
