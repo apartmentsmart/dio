@@ -225,7 +225,8 @@
       <button type="submit"
               class="btn btn-orange btn-lg"
               ng-click="send()"
-              ng-show="!messageForm.$invalid">
+              ng-show="!messageForm.$invalid"
+              onClick="ga('send', 'event', 'ButtonClicks', 'buttonClick', 'Submit Button');">
         Send!
       </button>
 
