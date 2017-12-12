@@ -113,11 +113,11 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
       );
     });
 
-    //console.log(messages);
+    console.log(messages);
 
 
 
-    /*  Comment out this block to disable actually posting messages to congress members' web forms */
+    /*  Comment out this block to disable actually posting messages to congress members' web forms
 
     var cb = function(err, messageResponses) {
       var serverErr = !isEmpty(err);
@@ -161,7 +161,7 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
       dioAPI.subscribeToEFFList(subRequest, function() {
         // no-op as EFF subscription is best-effort only
       });
-    }
+    }  */
     /* end disable bloc */
 	};
 
