@@ -22,7 +22,7 @@ var models = require('../../../models');
 var parseTopicOptions = function(topicElem, legislator) {
   var options = isArray(topicElem.optionsHash) ?
     topicElem.optionsHash : keys(topicElem.optionsHash);
-  
+
   //loop below to set 'Housing' as selected topic, set default index to 1 so 'Abortion' not selected if condition not true
   var selOpt = 1;
   options.forEach(function(element, index) {
@@ -36,7 +36,7 @@ var parseTopicOptions = function(topicElem, legislator) {
         if(element.indexOf('Oth') !== -1 || element.indexOf('OTH') !== -1 || element.indexOf('oth') !== -1) {
           selOpt = index;
         }
-      });   
+      });
   }
 
   return {
@@ -104,12 +104,25 @@ var makeMessageInfo = function(legislator, formData, afhourl, topic) {
       topic.selected : topic.optionsHash[topic.selected];
   }
 
-  return {
-    topic: topicValue,
-    subject: 'Affordable Housing Data',
-    //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
-    message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThis web page has interesting data regarding affordable housing for our area:\n ' + afhourl +'. \n' + formData.message
-  };
+
+  if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/2017-tax-reform-bill') {
+
+    return {
+      topic: topicValue,
+      subject: '2017 Tax Reform Hurts Low-Income Renters',
+      //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
+      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThe tax reform legislation currently under consideration by Congress will harm low-income renters in America. Low-income housing is already hard to find and obtain. Please don’t make it harder. Please vote “No” on any tax reform legislation that comes before you that doesn’t consider low-income Americans and their struggle to find affordable housing. You can read more about how the legislation impacts low-income renters here:\n https://affordablehousingonline.com/blog/proposed-tax-reform-not-good-low-income-renters. \n' + formData.message
+    };
+
+
+  } else {
+    return {
+      topic: topicValue,
+      subject: 'Affordable Housing Data',
+      //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
+      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThis web page has interesting data regarding affordable housing for our area:\n ' + afhourl +'. \n' + formData.message
+    };
+  }
 
 };
 
