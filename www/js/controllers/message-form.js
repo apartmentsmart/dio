@@ -147,7 +147,7 @@ var MessageFormController = /*@ngInject*/ function($scope, $rootScope, $location
 
     /* maybe add code here to insert into mysql database - then move to proper location after launch */
 
-
+    /*
     if ($scope.joinEmailList) {
       var messageSender = new MessageSender({
         firstName: $scope.formData.firstName,
