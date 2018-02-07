@@ -104,8 +104,16 @@ var makeMessageInfo = function(legislator, formData, afhourl, topic) {
       topic.selected : topic.optionsHash[topic.selected];
   }
 
+  if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/affordable-housing-credit-improvement-act') {
 
-  if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/2017-tax-reform-bill') {
+    return {
+      topic: topicValue,
+      subject: 'Include Provisions of S.548 in Budget Deal',
+      //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
+      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nS.548, the Affordable Housing Credit Improvement Act (sponsored by Senators Maria Cantwell and Orrin Hatch) is bipartisan legislation that will increase the production of affordable rental housing while stimulating economic growth in the construction sector. The Senate is now considering making the provisions of S.548 part of the budget deal now being negotiated.\n\nPlease help increase housing production and stimulate our local economy by asking Senate and House leadership to include the provisions of S.548 in the budget deal \n\n' + formData.message
+    };
+
+} else if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/2017-tax-reform-bill') {
 
     return {
       topic: topicValue,
