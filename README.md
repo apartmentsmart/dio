@@ -84,6 +84,7 @@ Spins up a local server to serve the app, including proxying browsersync on top 
 ```
 gulp serve
 ```
+AHO note: unless you make some changes to some host and/or config files, spinning up a gulp server may not work if you have a vagrant `laravel homestead` box running. Suspend the homestead instance prior to running gulp serve, and this app runs locally with no problem.
 
 ## Deploying
 
