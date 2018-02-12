@@ -108,9 +108,9 @@ var makeMessageInfo = function(legislator, formData, afhourl, topic) {
 
     return {
       topic: topicValue,
-      subject: 'FY2019 HUD Budget Proposal',
+      subject: 'Ignore Trump Budget and Fully Fund Housing Programs',
       //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
-      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae maximus sapien. Phasellus quis justo auctor, venenatis velit in, bibendum quam. Mauris eleifend lacus sit amet diam venenatis efficitur. Nullam euismod lobortis felis, at auctor risus pellentesque at. Nulla dignissim ex nec lectus congue, id pretium diam tempus. Vestibulum quis magna nibh. Donec ac malesuada nisi, et congue ante. Maecenas vel maximus ipsum, vel dignissim ipsum. Nunc sem velit, vehicula ut metus vel, mollis ultricies eros. Fusce mauris ex, viverra vitae faucibus non, pharetra et arcu. Maecenas ut magna ac ipsum ultrices laoreet id at quam. Cras in ipsum vel magna varius mattis sed ac tellus. Praesent maximus orci diam, non congue erat pretium vitae. In hac habitasse platea dictumst. Sed quis nisl eleifend, varius metus in, maximus felis. Sed nec vulputate magna.  \n\n' + formData.message
+      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThe FY19 Trump Budget came out on February 12, 2018 and proposes to decimate affordable housing funding. Historically productive programs like Section 8 Housing Choice Vouchers, Public Housing and CDBG/HOME are being drastically reduced or eliminated.\n\n Please, please, please. Ignore the Trump Budget and do the right thing by fully funding the HUD budget. \n\n For more info and analysis, see this page on Affordable Housing Online: https://affordablehousingonline.com/fy19-hud-budget-cuts \n\n' + formData.message
     };
 
 } else if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/affordable-housing-credit-improvement-act') {
