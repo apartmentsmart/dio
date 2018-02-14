@@ -8,39 +8,54 @@
        id="wrapper"
        class="content">
 
+
     <div class="main">
-    
+
+
       {! {>"components/nav-bar"/} !}
 
       <noscript>
       <div class="text-center"><h3>This window requires Javascript to work.</h3><h4>Please load the site using a browser that supports Javascript.</h4></div></noscript>
+{!
+    <h1 class="header">Tell your Congresspersons you care</h1>
+    <h2>In 3 easy steps, send a personal email to all your members of congress at once. It takes less than a minute.</h2>
 
-     {! <div ng-switch ng-cloak on="pageName">
+
+    <div ng-switch ng-cloak on="pageName">
+     <h1 ng-switch-when="home"
+             class="header">
+             Tell your Congresspersons you care about this
+        </h1>
+        <h2 ng-switch-when="home"
+             class="header">It only takes 60 Seconds!<h2>
+             <p ng-switch-when="home" class="header">We've made it very easy to share your thoughts on this issue with all 3 of your Congresspeople. In 3 easy steps below, you can send a personal message to all of them at once.</p>
+
+        <div ng-switch-default></div>
         <div ng-switch-when="home"
              class="header"
              dio-write-to-them-animation=""
-             animate-msg="Write to your representatives"
+             animate-msg="Tell your Congresspersons you care about this"
              initial-delay="500"
              speed="30"
              show-full="pageFrom !== 'new-visit'">
         </div>
-        <h1 ng-switch-when="location" 
+        <h1 ng-switch-when="location"
              class="header">
              Who do you want to write to?
         </h1>
-        <h1 ng-switch-when="compose" 
+        <h1 ng-switch-when="compose"
              class="header">
-             Write your message      
+             Fill in info, send message.
         </h1>
-        <h1 ng-switch-when="captcha" 
+        <h1 ng-switch-when="captcha"
               class="header">
              Verify that you're a human
         </h1>
-        <h1 ng-switch-when="thanks" 
+        <h1 ng-switch-when="thanks"
               class="header">
              Message sent!
         </h1>
-      </div> !}
+      </div>   !}
 
       {>"components/progress-bar"/}
 

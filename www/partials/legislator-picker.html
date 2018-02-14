@@ -45,14 +45,15 @@
                ng-model="bioguideIdsBySelection[legislator.bioguideId]"
                id="[[legislator.bioguideId]]" unchecked ng-disabled="[[legislator.defunct]]">
         <label for="[[legislator.bioguideId]]" ng-class="{'defunct-legislator': legislator.defunct}">
-          [[legislator.title]]. [[legislator.firstName]] [[legislator.lastName]] 
+          [[legislator.title]]. [[legislator.firstName]] [[legislator.lastName]]
           <div ng-if="legislator.defunct">Sorry, we can't message this legislator at the moment. We are working to fix the problem. Please contact them <a target="_blank" rel="noopener" href="[[legislator.contact_url]]">here</a> instead.</div>
         </label>
       </div>
       <button type="submit"
               class="btn btn-lg btn-orange"
               ng-disabled="anyRepSelected()"
-              ng-click="submit()">
+              ng-click="submit()"
+              id="ahoDioPickLegs">
         Write to them!
       </button>
     </div>

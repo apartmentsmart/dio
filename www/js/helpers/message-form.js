@@ -110,7 +110,7 @@ var makeMessageInfo = function(legislator, formData, afhourl, topic) {
       topic: topicValue,
       subject: 'Ignore Trump Budget and Fully Fund Housing Programs',
       //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
-      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThe FY19 Trump Budget came out on February 12, 2018 and proposes to decimate affordable housing funding. Historically productive programs like Section 8 Housing Choice Vouchers, Public Housing and CDBG/HOME are being drastically reduced or eliminated.\n\n Please, please, please. Ignore the Trump Budget and do the right thing by fully funding the HUD budget. \n\n For more info and analysis, see this page on Affordable Housing Online: https://affordablehousingonline.com/fy19-hud-budget-cuts \n\n' + formData.message
+      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThe FY19 Trump Budget came out on February 12, 2018 and proposes to decimate affordable housing funding. Historically productive programs like Section 8 Housing Choice Vouchers, Public Housing and CDBG/HOME are being drastically reduced or eliminated.\n\n Please, please, please. Ignore the Trump Budget and do the right thing by fully funding the HUD budget. \n\n For more info and analysis, see this page on Affordable Housing Online: https://affordablehousingonline.com/fy19-hud-budget-cuts?utm_source=email&utm_medium=advocacy_dio&utm_campaign=embedlink \n\n' + formData.message
     };
 
 } else if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/affordable-housing-credit-improvement-act') {
