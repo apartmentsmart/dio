@@ -62,12 +62,7 @@
             <div ng-class="{addressValid: addressForm.$valid}" class="clearfix" id="submitAddress">
               <button type="submit"
                       class="btn btn-lg btn-orange"
-                      ng-click="validateAddress(); dataLayer.push({
-                        'event': 'AddressCheck',
-                        'eventCategory': 'DIO',
-                        'eventAction': 'Click',
-                        'eventLabel': '[[ahurl]]'
-                    });"
+                      ng-click="validateAddress()"
                       id="ahoDioCheckAddress">
               Submit
               </button>
