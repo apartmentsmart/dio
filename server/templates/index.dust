@@ -16,12 +16,17 @@
 
       <noscript>
       <div class="text-center"><h3>This window requires Javascript to work.</h3><h4>Please load the site using a browser that supports Javascript.</h4></div></noscript>
-{!
-    <h1 class="header">Tell your Congresspersons you care</h1>
-    <h2>In 3 easy steps, send a personal email to all your members of congress at once. It takes less than a minute.</h2>
+
+ <div ng-switch ng-cloak on="pageName">
+  <div ng-switch-when="home" id="homecta">
+   <h1>Contact Congress: start by entering your address.</h1>
+   <h2>(We do not save or share your address - we only use it to look up your Congresspersons.)</h2>
+  </div>
+  <div ng-switch-default></div>
+</div>
 
 
-    <div ng-switch ng-cloak on="pageName">
+   {! <div ng-switch ng-cloak on="pageName">
      <h1 ng-switch-when="home"
              class="header">
              Tell your Congresspersons you care about this
@@ -55,7 +60,7 @@
               class="header">
              Message sent!
         </h1>
-      </div>   !}
+      </div>  !}
 
       {>"components/progress-bar"/}
 
