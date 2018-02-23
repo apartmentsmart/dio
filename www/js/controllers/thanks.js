@@ -6,6 +6,10 @@ var ThanksController = /*@ngInject*/ function($scope, $sce) {
 
   // TODO(all): Use the message-response objects to customize the thanks page
 
+  //redirect to finish page - help with active campaign tracking
+
+  window.open('/static/finish.html', '_self');
+
   $scope.shares = [
     {
       name: 'Facebook',

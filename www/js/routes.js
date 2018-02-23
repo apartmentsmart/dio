@@ -13,7 +13,7 @@ var configureRoutes = function($routeProvider) {
     .when('/', {
       templateUrl: '/partials/home.html',
       title: 'Write to your representatives'
-    }) 
+    })
     .when('/location', {
       controller: 'LegislatorPickerController',
       templateUrl: '/partials/legislator-picker.html',
