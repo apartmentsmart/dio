@@ -51,26 +51,36 @@
       <div class="row">
         <div class="form-group col-sm-8 col-md-9">
           <label for="inputSubject">Subject</label>
-          <div ng-switch="ahurl">
+          <div ng-if="fy19BudCuts">
 
-              <div ng-switch-when="https://affordablehousingonline.com/advocacy/issues/fy19-hud-budget">
-                <p><strong>Ignore Trump Budget and Fully Fund Housing Programs</strong></p>
+              <p><strong>Please Fully Fund Housing Programs</strong></p>
 
-              </div>
+          </div>
 
-              <div ng-switch-when="https://affordablehousingonline.com/advocacy/issues/affordable-housing-credit-improvement-act">
-                <p><strong>Support Affordable Housing Credit</strong></p>
+          <div ng-if="!fy19BudCuts">
 
-              </div>
+            <div ng-switch="ahurl">
 
-              <div ng-switch-when="https://affordablehousingonline.com/advocacy/issues/2017-tax-reform-bill">
-                <p><strong>2017 Tax Reform Hurts Low-Income Renters</strong></p>
+                <div ng-switch-when="https://affordablehousingonline.com/advocacy/issues/fy19-hud-budget">
+                  <p><strong>Ignore Trump Budget and Fully Fund Housing Programs</strong></p>
 
-              </div>
+                </div>
 
-              <div ng-switch-default>
-                  <p><strong>Affordable Housing Data</strong></p>
-              </div>
+                <div ng-switch-when="https://affordablehousingonline.com/advocacy/issues/affordable-housing-credit-improvement-act">
+                  <p><strong>Support Affordable Housing Credit</strong></p>
+
+                </div>
+
+                <div ng-switch-when="https://affordablehousingonline.com/advocacy/issues/2017-tax-reform-bill">
+                  <p><strong>2017 Tax Reform Hurts Low-Income Renters</strong></p>
+
+                </div>
+
+                <div ng-switch-default>
+                    <p><strong>Affordable Housing Data</strong></p>
+                </div>
+
+            </div>
 
           </div>
 

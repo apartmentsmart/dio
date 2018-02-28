@@ -104,7 +104,16 @@ var makeMessageInfo = function(legislator, formData, afhourl, topic) {
       topic.selected : topic.optionsHash[topic.selected];
   }
 
-  if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/fy19-hud-budget') {
+  if (afhourl.indexOf('fy19-hud-budget-cuts') > -1) {
+
+    return {
+      topic: topicValue,
+      subject: 'Please Fully Fund Housing Programs',
+      //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
+      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThe FY19 White House budget proposal came out on February 12, 2018 and proposes to decimate affordable housing funding. Historically productive programs like Section 8 Housing Choice Vouchers, Public Housing and CDBG/HOME are being drastically reduced or eliminated. To see how these cuts affect states, counties, and smaller locales, including ours, please see this page at Affordable Housing Online:\n\n' + afhourl + '\n\n Please support affordable housing for our area by ignoring the White House budget proposal and fully funding (or even increasing) existing budgets for the HUD programs listed above.' + formData.message
+    };
+
+  } else if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/fy19-hud-budget') {
 
     return {
       topic: topicValue,
