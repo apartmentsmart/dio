@@ -13,6 +13,14 @@ var AddressFormController = /*@ngInject*/ function($scope, $rootScope, $routePar
 
   $rootScope.ahurl = $routeParams.ahourl;
 
+  //set flag for fy19 hud budget cuts
+
+  $rootScope.fy19BudCuts = false;
+
+  if( $rootScope.ahurl .indexOf('fy19-hud-budget-cuts') > -1) {
+    $rootScope.fy19BudCuts = true;
+  }
+
   $scope.addressData = helpers.getAddressData(dioData.getCanonicalAddress());
 
   $scope.data = {
