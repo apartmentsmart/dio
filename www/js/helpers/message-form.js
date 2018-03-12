@@ -62,6 +62,17 @@ var parseCountyOptions = function(countyElem, addressCounty) {
     return addressCounty === countyOption || startsWith(countyOption, addressCounty);
   })[0];
 
+  /* check and hack to handle case where legislator form has county field
+  as standard text input, not dropdown select (e.g. Udall from NM 03/12/18) -
+  use smartystreets returned county in single element array */
+
+  if (countyOptions.length == 0 || typeof countyOptions == 'undefined') {
+
+    countyOptions[0] = addressCounty;
+    selectedCounty = addressCounty;
+
+  }
+
   return {
     selected: isUndefined(selectedCounty) ? countyOptions[0] : selectedCounty,
     options: countyOptions
