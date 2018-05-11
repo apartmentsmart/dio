@@ -113,6 +113,15 @@ var makeMessageInfo = function(legislator, formData, afhourl, topic) {
       message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThe FY19 White House budget proposal came out on February 12, 2018 and proposes to decimate affordable housing funding. Historically productive programs like Section 8 Housing Choice Vouchers, Public Housing and CDBG/HOME are being drastically reduced or eliminated. To see how these cuts affect states, counties, and smaller locales, including ours, please see this page at Affordable Housing Online:\n\n' + afhourl + '\n\n Please support affordable housing for our area by ignoring the White House budget proposal and fully funding (or even increasing) existing budgets for the HUD programs listed above.' + formData.message
     };
 
+  } else if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/HUD-rent-increases-2018') {
+
+    return {
+      topic: topicValue,
+      subject: 'Please oppose HUD rent increases',
+      //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
+      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThe Trump Administration proposes to increase rents and add work requirements for households receiving federal housing assistance. Millions of low-income renters will see their rents rise and face the prospect of eviction if Congress accepts these proposals. \n\n For more info and analysis, see this page on Affordable Housing Online: https://affordablehousingonline.com/blog/carsons-proposed-rent-increases-will-devastate-millions/ \n\n' + formData.message
+    };
+
   } else if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/fy19-hud-budget') {
 
     return {
@@ -121,25 +130,6 @@ var makeMessageInfo = function(legislator, formData, afhourl, topic) {
       //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
       message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThe FY19 Trump Budget came out on February 12, 2018 and proposes to decimate affordable housing funding. Historically productive programs like Section 8 Housing Choice Vouchers, Public Housing and CDBG/HOME are being drastically reduced or eliminated.\n\n Please, please, please. Ignore the Trump Budget and do the right thing by fully funding the HUD budget. \n\n For more info and analysis, see this page on Affordable Housing Online: https://affordablehousingonline.com/fy19-hud-budget-cuts?utm_source=email&utm_medium=advocacy_dio&utm_campaign=embedlink \n\n' + formData.message
     };
-
-} else if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/affordable-housing-credit-improvement-act') {
-
-    return {
-      topic: topicValue,
-      subject: 'Include Provisions of S.548 in Budget Deal',
-      //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
-      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nS.548, the Affordable Housing Credit Improvement Act (sponsored by Senators Maria Cantwell and Orrin Hatch) is bipartisan legislation that will increase the production of affordable rental housing while stimulating economic growth in the construction sector. The Senate is now considering making the provisions of S.548 part of the budget deal now being negotiated.\n\nPlease help increase housing production and stimulate our local economy by asking Senate and House leadership to include the provisions of S.548 in the budget deal \n\n' + formData.message
-    };
-
-} else if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/2017-tax-reform-bill') {
-
-    return {
-      topic: topicValue,
-      subject: '2017 Tax Reform Hurts Low-Income Renters',
-      //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
-      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThe tax reform legislation currently under consideration by Congress will harm low-income renters in America. Low-income housing is already hard to find and obtain. Please don’t make it harder. Please vote “No” on any tax reform legislation that comes before you that doesn’t consider low-income Americans and their struggle to find affordable housing. You can read more about how the legislation impacts low-income renters here:\n https://affordablehousingonline.com/blog/proposed-tax-reform-not-good-low-income-renters. \n' + formData.message
-    };
-
 
   } else {
     return {
