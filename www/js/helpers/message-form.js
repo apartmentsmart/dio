@@ -135,9 +135,9 @@ var makeMessageInfo = function(legislator, formData, afhourl, topic) {
 
     return {
       topic: topicValue,
-      subject: '[ch copy here]',
+      subject: 'Oppose Changes to Public Charge Rules for Legal Immigrants',
       //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
-      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n[ch copy here] \n\n For more info and analysis, see this page on Affordable Housing Online: https://affordablehousingonline.com/blog/trump-proposal-punishes-legal-immigrants-receiving-housing-benefits/ \n\n' + formData.message
+      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThe Trump Administration’s effort to change the rules for determining an immigrant’s status as a public charge will hurt immigrant families, their employers and the communities where they live. Housing assistance, food assistance, healthcare for children and tax refunds for working people help stabilize families and keep them working towards a dream of citizenship.\n\n Congress has authorized the use of these support programs by legal immigrants because they improve their chances of self-sufficiency, children’s well-being is protected and public health and safety are improved.\n\n Please oppose the proposed changes to the public charge rule. Let the Department of Homeland Security and the White House know that the changes to the public charge rule will be very harmful to our communities and economy.\n\n For more info and analysis, see this page on Affordable Housing Online: https://affordablehousingonline.com/blog/trump-proposal-punishes-legal-immigrants-receiving-housing-benefits/ \n\n' + formData.message
     };
 
   } else {
