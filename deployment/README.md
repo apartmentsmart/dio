@@ -20,6 +20,8 @@ This app is running on its own Ubuntu EC2 instance. The app files reside in the 
 
 ##  Deployment
 
+*mid-2018: we have been skipping the `npm-run test` and the `curl` steps below*
+
 - Pull latest version from repo. AHO note: we are pulling from the master branch of [our own AHO repo](https://github.com/apartmentsmart/dio).
 - `npm install` (installs npm modules)
 - `npm run build:prod` (builds static assets)
