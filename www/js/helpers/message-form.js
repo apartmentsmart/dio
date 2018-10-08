@@ -117,9 +117,9 @@ var makeMessageInfo = function(legislator, formData, afhourl, topic) {
 
     return {
       topic: topicValue,
-      subject: 'Please support Rent Relief Act',
+      subject: 'Support Renter Tax Credits',
       //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
-      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThe Trump Administration proposes to increase rents and add work requirements for households receiving federal housing assistance. Millions of low-income renters will see their rents rise and face the prospect of eviction if Congress accepts these proposals. \n\n For more info and analysis, see this page on Affordable Housing Online: https://affordablehousingonline.com/blog/carsons-proposed-rent-increases-will-devastate-millions/ \n\n' + formData.message
+      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nPlease support bills proposing a tax credit to help struggling renters. Too many low-income renters are cost-burdened, with many having extreme cost burden and paying more than half their incomes for rent. \n\n I encourage your support for either the Rent Relief Act sponsored by Senator Kamala Harris in the Senate and Representative Scott Peters in the House, or the HOME Act sponsored by Senator Cory Booker in the Senate. These bills provide the kind of refundable tax credit that will help low-income renters keep their homes and move their families towards opportunity. \n\n Far too many low-income renters find crippling housing costs are keeping them from the American dream. Renter tax credits will help millions of families find and keep affordable homes. \n\n For more info and analysis, see this report on Affordable Housing Online: https://affordablehousingonline.com/blog/renter-tax-credits-proposed-address-u-s-rental-housing-crisis/ \n\n' + formData.message
     };
 
   } else if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/HUD-rent-increases-2018') {
