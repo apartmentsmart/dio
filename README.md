@@ -7,6 +7,8 @@ Express & Angular app for sending messages to Senate and House members
 
 (c) 2015 Electronic Frontier Foundation
 
+New public repo:  https://github.com/sinak/democracy.io
+
 ## Table of Contents
 
 * [Background Info](#background-info)
