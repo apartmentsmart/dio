@@ -113,6 +113,18 @@ var makeMessageInfo = function(legislator, formData, afhourl, topic) {
       message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nThe FY19 White House budget proposal came out on February 12, 2018 and proposes to decimate affordable housing funding. Historically productive programs like Section 8 Housing Choice Vouchers, Public Housing and CDBG/HOME are being drastically reduced or eliminated. To see how these cuts affect states, counties, and smaller locales, including ours, please see this page at Affordable Housing Online:\n\n' + afhourl + '\n\n Please support affordable housing for our area by ignoring the White House budget proposal and fully funding (or even increasing) existing budgets for the HUD programs listed above.' + formData.message
     };
 
+  } else if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/shutdown01-renters-at-risk') {
+
+    return {
+      topic: topicValue,
+      subject: 'Millions of Low-Income Americans Are About to Lose Housing; Please End the Government Shutdown',
+      //message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \n' + formData.message
+      message: 'Dear ' + legislator.title + ' ' + legislator.lastName + ', \nI urge you to do EVERYTHING in your power to END THE SHUTDOWN TODAY. \n\nIf the shutdown continues into March: \n\n  -Approximately $1.8 billion per month in rent checks will not be mailed to landlords who house Section 8 Housing Choice Voucher holders; \n\n
+      -Tens of thousands of Section 8 voucher holders (the poorest of the poor) who rely on utility reimbursement checks to pay their utility bills will not receive their reimbursements and not be able to keep the heat and lights on; \n
+      -Thousands of Public Housing Authority (PHA) employees who process vouchers and assist low income Americans with their housing needs could be furloughed becaused PHA administrative fees will not be paid by HUD; \n
+      -Tens of Thousands of Project Based Section 8 and Section 515 Rural Rental Housing units are without subsidy and tens of thousands more will be added each month. Tenants could be evicted and landlords may not have enough cash to keep the lights on. \n\nFor more info and analysis, see this report on Affordable Housing Online: https://affordablehousingonline.com/blog/millions-low-income-renters-at-risk-if-shutdown-into-March \n\nAgain, PLEASE, PLEASE, PLEASE, do whatever you can to END THE SHUTDOWN TODAY. \n\n' + formData.message
+    };
+
   } else if (afhourl == 'https://affordablehousingonline.com/advocacy/issues/rent-relief-act') {
 
     return {
