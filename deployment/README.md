@@ -38,3 +38,7 @@ The deploy process above is encapsulated in the ecosystem.json5 file, and can be
 pm2 deploy ecosystem.json5 production 
 ```
 (may have to run as sudo)
+
+## Log files
+
+In ec2 user's home directory, there is a hidden directory `.pm2` that contains log files and socket links.
