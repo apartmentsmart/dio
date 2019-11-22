@@ -83,7 +83,7 @@
     "bcrypt": ">= 1.0.3",
     "body-parser": "^1.12.4",
     "bootstrap": "^3.3.2",
-    "bootstrap-sass": "3.3.2",
+    "bootstrap-sass": "3.4.1",
     "change-case-keys": "0.0.4",
     "compression": "^1.4.4",
     "config": "^1.12.0",
